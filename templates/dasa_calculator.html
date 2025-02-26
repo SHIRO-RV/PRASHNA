@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2>Date Adjuster</h2>
+    <form method="post">
+        <label>Given Date (YYYY-MM-DD):</label><br>
+        <input type="date" name="given_date" required><br><br>
+        
+        <label>Current Dasa:</label><br>
+        <select name="current_dasa" required>
+            <option value="Sun">Sun</option>
+            <option value="Moon">Moon</option>
+            <option value="Mars">Mars</option>
+            <option value="Rahu">Rahu</option>
+            <option value="Jupiter">Jupiter</option>
+            <option value="Saturn">Saturn</option>
+            <option value="Mercury">Mercury</option>
+            <option value="Ketu">Ketu</option>
+            <option value="Venus">Venus</option>
+        </select><br><br>
+
+        <label>Pada (1-4):</label><br>
+        <input type="number" name="pada" min="1" max="4" required><br><br>
+        
+        <input type="submit" value="Calculate Adjusted Date">
+    </form>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+        <a class="nav-btn" href="{{ url_for('home') }}">Back</a>
+    </div>
+</div>
+{% endblock %}

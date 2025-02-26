@@ -1,0 +1,249 @@
+/* Common CSS using only white, black, and blue shades */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff; /* white */
+    color: #000000;      /* black */
+}
+
+nav {
+    background: #003366; /* dark blue */
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-size: 24px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.brand small {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 15px;
+}
+
+/* Nav buttons: white background with dark blue text */
+.nav-links a.nav-btn {
+    background: #ffffff;
+    color: #003366;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-links a.nav-btn:hover {
+    background: #e6e6e6;
+}
+
+header {
+    background: #e6f0ff; /* very light blue */
+    padding: 10px; /* reduced from 20px */
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    /* Removed border-bottom: 2px solid #003366; */
+}
+
+.header-container h1 {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 32px;
+    color: #003366;
+}
+
+.arrow {
+    font-size: 36px;
+    color: #003366;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.arrow:hover {
+    color: #002244;
+}
+
+.content {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.container {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="date"],
+input[type="time"],
+input[type="number"],
+select,
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0 15px 0;
+    border: 1px solid #003366;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background: #003366;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background: #002244;
+}
+
+.btn {
+    background: #003366;
+    color: #ffffff;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.btn:hover {
+    background: #002244;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #e6f0ff;
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 5px solid #003366;
+}
+
+a {
+    text-decoration: none;
+    color: #003366;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* New CSS for navigation buttons */
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Big button styling for actions like "View Antardasha" */
+.big-btn {
+    background: #003366;
+    color: #ffffff;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.big-btn:hover {
+    background: #002244;
+}
+
+/* Additional styling for home page sections */
+.section {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #003366;
+    border-radius: 8px;
+    background: #e6f0ff;
+}
+
+.section h3 {
+    margin-top: 0;
+    color: #003366;
+}
+/* Footer Styles */
+footer {
+    background: #003366;  /* dark blue */
+    color: #ffffff;       /* white text */
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+.footer-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-container p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media a {
+    color: #ffffff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+.logo {
+    height: 60px;
+    margin-right: 10px;
+    vertical-align: middle;
+    border-radius: 50%;       /* Makes the image circular if it's a square image */
+    border: 2px solid #003366;  /* Optional border that matches your theme */
+    object-fit: cover;        /* Ensures the image is cropped nicely if aspect ratio changes */
+}

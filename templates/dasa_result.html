@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2>Adjusted Date Result</h2>
+    <p>The updated dasa start date is: <strong>{{ new_date }}</strong></p>
+    <div class="nav-buttons">
+        <a class="nav-btn" href="{{ url_for('dasa_calculator') }}">Back</a>
+        <a class="nav-btn" href="{{ url_for('index') }}">Next</a>
+    </div>
+</div>
+{% endblock %}

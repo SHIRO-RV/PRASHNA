@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2>Sookshma Breakdown for {{ pratyantara_name }} Antardasha</h2>
+    <p>Duration: {{ duration | format_duration }}</p>
+    <ul>
+        {% for rec in sookshma_chart %}
+            <li>{{ rec[0] }}: {{ rec[1] }} to {{ rec[2] }} (Duration: {{ rec[3] | format_duration }})</li>
+        {% endfor %}
+    </ul>
+    <br>
+    <a class="nav-btn" href="{{ url_for('index') }}">Back to Calculator</a>
+</div>
+{% endblock %}

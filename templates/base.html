@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <!-- Updated brand link with your logo image -->
+            <a class="brand" href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='logo.jpg') }}" alt="Company Logo" class="logo">
+                Prashna <small>by Re-View</small>
+            </a>
+            <ul class="nav-links">
+                <li><a class="nav-btn" href="{{ url_for('home') }}">Home</a></li>
+                <li><a class="nav-btn" href="{{ url_for('index') }}">Dasha Calculator</a></li>
+                <li><a class="nav-btn" href="{{ url_for('dasa_calculator') }}">Date Adjuster</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="header-container">
+            <a href="{{ url_for('home') }}" class="arrow left">&#8592;</a>
+            <h1>{{ title }}</h1>
+            <a href="{{ url_for('index') }}" class="arrow right">&#8594;</a>
+        </div>
+    </header>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Re-View. All rights reserved.</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/share/1XVwdmm6fe/" target="_blank">Facebook</a>
+                <a href="https://x.com/review_rvoffl?t=Oa80sXJUn9hlZVDUD1rs-w&s=08" target="_blank">Twitter-x</a>
+                <a href="https://www.instagram.com/re_view.offcial?igsh=MW04emczang1ZDQxNw==" target="_blank">Instagram</a>
+                <a href="http://linkedin.com/company/re-viewrv25" target="_blank">LinkedIn</a><br>
+                <p>reviewrv25@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

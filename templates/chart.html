@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2>Dasha Chart Summary</h2>
+    <p><strong>Current Date & Time:</strong> {{ current_dt }}</p>
+    <p><strong>Assumed Birth Date:</strong> {{ birth_date }}</p>
+    <p><strong>Age:</strong> {{ age }} years</p>
+    <p><strong>Current Dasa:</strong> {{ current_dasa }}</p>
+
+    <h3>Past Dashas</h3>
+    <ul>
+        {% for rec in past_chart %}
+            <li>
+                {{ rec[0] }}: {{ rec[1] }} to {{ rec[2] }} (Duration: {{ rec[3] }} years)
+                <form action="{{ url_for('antardasha') }}" method="post">
+                    <input type="hidden" name="mahadasha" value="{{ rec[0] }}">
+                    <input type="hidden" name="duration" value="{{ rec[3] }}">
+                    <input type="hidden" name="start_dt" value="{{ rec[1] }}">
+                    <input type="submit" value="View Antardasha" class="big-btn">
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h3>Future Dashas</h3>
+    <ul>
+        {% for rec in future_chart %}
+            <li>
+                {{ rec[0] }}: {{ rec[1] }} to {{ rec[2] }} (Duration: {{ rec[3] }} years)
+                <form action="{{ url_for('antardasha') }}" method="post">
+                    <input type="hidden" name="mahadasha" value="{{ rec[0] }}">
+                    <input type="hidden" name="duration" value="{{ rec[3] }}">
+                    <input type="hidden" name="start_dt" value="{{ rec[1] }}">
+                    <input type="submit" value="View Antardasha" class="big-btn">
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+        <a class="nav-btn" href="{{ url_for('index') }}">Back</a>
+    </div>
+</div>
+{% endblock %}

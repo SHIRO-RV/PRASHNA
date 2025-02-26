@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2>Welcome to Prashna</h2>
+    <div class="section">
+        <h3>About Prana</h3>
+        <p>
+            Prana is the vital life force in Vedic philosophy that sustains all living beings.
+            It flows through every part of the body and mind, and its balance is essential for well-being.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>The 9 Planets (Navagrahas) & Dasha Periods</h3>
+        <p>The Vimshottari Dasha system is based on the influence of 9 celestial bodies, with their respective Dasha periods:</p>
+        <ul>
+            <li><strong>Sun:</strong> 6 years</li>
+            <li><strong>Moon:</strong> 10 years</li>
+            <li><strong>Mars:</strong> 7 years</li>
+            <li><strong>Rahu:</strong> 18 years</li>
+            <li><strong>Jupiter:</strong> 16 years</li>
+            <li><strong>Saturn:</strong> 19 years</li>
+            <li><strong>Mercury:</strong> 17 years</li>
+            <li><strong>Ketu:</strong> 7 years</li>
+            <li><strong>Venus:</strong> 20 years</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3>The 27 Nakshatras</h3>
+        <p>
+            The zodiac in Vedic astrology is divided into 27 Nakshatras (lunar mansions), each with unique characteristics.
+            They are: Aswini, Bharani, Krittika, Rohini, Mrigashira, Ardra, Punarvasu, Pushya, Ashlesha, Magha, Purva Phalguni, Uttara Phalguni, Hasta, Chitra, Swati, Vishakha, Anuradha, Jyeshtha, Mula, Purva Ashadha, Uttara Ashadha, Shravana, Dhanishta, Shatabhisha, Purva Bhadrapada, Uttara Bhadrapada, and Revati.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>What is Pada?</h3>
+        <p>
+            Each Nakshatra is subdivided into 4 equal parts, known as Padas. The Pada provides deeper insight into the specific qualities and timing of a Nakshatra’s influence.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>How to Use Prashna</h3>
+        <p>
+            Prashna offers two main functionalities:
+        </p>
+        <ol>
+            <li>
+                <strong>Date Adjuster:</strong> Calculate the adjusted starting date of your current Dasa based on a given date, current Dasa, and Pada.
+            </li>
+            <li>
+                <strong>Dasha Calculator:</strong> Generate a comprehensive Dasha chart detailing your past and future planetary periods.
+            </li>
+        </ol>
+    </div>
+
+    <!-- Navigation Options at the End -->
+    <div class="nav-buttons">
+        <a class="nav-btn" href="{{ url_for('dasa_calculator') }}">Date Adjuster</a>
+        <a class="nav-btn" href="{{ url_for('index') }}">Dasha Calculator</a>
+    </div>
+</div>
+{% endblock %}

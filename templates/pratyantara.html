@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2>Pratyantara Breakdown for {{ antardasha_name }} Antardasha</h2>
+    <p>Duration: {{ duration | format_duration }}</p>
+    <ul>
+        {% for rec in pratyantara_chart %}
+            <li>
+                {{ rec[0] }}: {{ rec[1] }} to {{ rec[2] }} (Duration: {{ rec[3] | format_duration }})
+                <form action="{{ url_for('sookshma') }}" method="post" style="display:inline;">
+                    <input type="hidden" name="pratyantara_name" value="{{ rec[0] }}">
+                    <input type="hidden" name="duration" value="{{ rec[3] }}">
+                    <input type="hidden" name="start_dt" value="{{ rec[1] }}">
+                    <input type="submit" value="View Sookshma" class="nav-btn">
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+    <br>
+    <a class="nav-btn" href="{{ url_for('index') }}">Back to Calculator</a>
+</div>
+{% endblock %}

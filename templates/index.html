@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2>Dasha Calculator</h2>
+    <form method="post" onsubmit="return validateForm();">
+        <label>Current Date:</label><br>
+        <input type="date" name="current_date" required><br>
+        
+        <label>Current Time (HH:MM:SS):</label><br>
+        <!-- Using step="1" to allow seconds -->
+        <input type="time" name="current_time" step="1" required><br>
+        
+        <label>Your Age:</label><br>
+        <input type="number" name="age" required><br>
+        
+        <label>Select Your Current Dasa:</label><br>
+        <select name="current_dasa">
+            <option value="Sun">Sun</option>
+            <option value="Moon">Moon</option>
+            <option value="Mars">Mars</option>
+            <option value="Rahu">Rahu</option>
+            <option value="Jupiter">Jupiter</option>
+            <option value="Saturn">Saturn</option>
+            <option value="Mercury">Mercury</option>
+            <option value="Ketu">Ketu</option>
+            <option value="Venus">Venus</option>
+        </select><br>
+        
+        <input type="submit" value="Calculate Dasha Chart">
+    </form>
+    <div class="nav-buttons">
+        <a class="nav-btn" href="{{ url_for('home') }}">Back</a>
+    </div>
+</div>
+<script>
+function validateForm() {
+    var dateInput = document.forms[0]["current_date"].value;
+    var timeInput = document.forms[0]["current_time"].value;
+    var ageInput = document.forms[0]["age"].value;
+    if (!dateInput) {
+        alert("Please select a current date.");
+        return false;
+    }
+    if (!timeInput) {
+        alert("Please enter the current time including seconds (HH:MM:SS).");
+        return false;
+    }
+    if (!ageInput || ageInput <= 0) {
+        alert("Please enter a valid age.");
+        return false;
+    }
+    return true;
+}
+</script>
+{% endblock %}
